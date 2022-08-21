@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>185410955044-emupdvoos1g01dsfc10k3s1n7sgvasa4.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.185410955044-emupdvoos1g01dsfc10k3s1n7sgvasa4</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDjFPLBElTkj1aRmpC0RfnHjA-9jT3yKWI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>185410955044</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.name.gopizza</string>
+	<key>PROJECT_ID</key>
+	<string>gopizza-b7762</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gopizza-b7762.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:185410955044:ios:1201a1f73a8271a62b75b1</string>
+</dict>
+</plist>
