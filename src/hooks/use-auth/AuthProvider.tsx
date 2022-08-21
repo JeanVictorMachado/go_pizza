@@ -4,6 +4,8 @@ import { AuthContext } from "./AuthContext";
 import { Alert } from "react-native";
 import { AuthProviderProps } from "src/@types/hooks/use-auth";
 
+import auth from "@react-native-firebase/auth";
+
 export const AuthProvider = ({ children }: AuthProviderProps) => {
   const [isLogging, setIsLogging] = useState(false);
 
@@ -17,21 +19,21 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
 
     setIsLogging(true);
 
-    // auth()
-    //   .signInWithEmailAndPassword(email, password)
-    //   .then((account) => {
-    //     console.log(account);
-    //   })
-    //   .catch((error) => {
-    //     const { code } = error;
+    auth()
+      .signInWithEmailAndPassword(email, password)
+      .then((account) => {
+        console.log(account);
+      })
+      .catch((error) => {
+        const { code } = error;
 
-    //     if (code === "auth/user-not-found" || code === "auth/wrong-password") {
-    //       return Alert.alert("Login", "E-mail e/ou senha inválida.");
-    //     }
+        if (code === "auth/user-not-found" || code === "auth/wrong-password") {
+          return Alert.alert("Login", "E-mail e/ou senha inválida.");
+        }
 
-    //     return Alert.alert("Login", "Não foi possível realizar o login.");
-    //   })
-    //   .finally(() => setIsLogging(false));
+        return Alert.alert("Login", "Não foi possível realizar o login.");
+      })
+      .finally(() => setIsLogging(false));
   };
 
   return (
