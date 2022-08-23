@@ -5,6 +5,7 @@ export type TypesInputProps = "primary" | "secondary";
 
 type TextInputProps = {
   type: TypesInputProps;
+  borderColor: TypesInputProps;
 };
 
 export const Container = styled(TextInput).attrs<TextInputProps>(
@@ -13,7 +14,7 @@ export const Container = styled(TextInput).attrs<TextInputProps>(
       type === "primary" ? theme.colors.secondary_900 : theme.colors.primary_50,
   })
 )<TextInputProps>`
-  ${({ theme, type }) => css`
+  ${({ theme, type, borderColor }) => css`
     width: 100%;
     height: 56px;
     font-size: 16px;
@@ -21,7 +22,10 @@ export const Container = styled(TextInput).attrs<TextInputProps>(
     padding: 7px 0;
     padding-left: 20px;
     margin-bottom: 16px;
-    border: 1px solid ${theme.colors.primary_50};
+    border: 1px solid
+      ${borderColor === "primary"
+        ? theme.colors.shape
+        : theme.colors.primary_50};
     border-radius: 12px;
     color: ${type === "primary"
       ? theme.colors.secondary_900

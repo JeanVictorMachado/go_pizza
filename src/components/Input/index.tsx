@@ -5,8 +5,15 @@ import * as S from "./styles";
 
 type InputProps = TextInputProps & {
   type?: TypesInputProps;
+  borderColor?: TypesInputProps;
 };
 
-export const Input = ({ type = "primary", ...rest }: InputProps) => {
-  return <S.Container type={type} {...rest}></S.Container>;
+export const Input = ({
+  type = "primary",
+  borderColor = "primary",
+  ...rest
+}: InputProps) => {
+  return (
+    <S.Container type={type} borderColor={borderColor} {...rest}></S.Container>
+  );
 };
